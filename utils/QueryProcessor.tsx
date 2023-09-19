@@ -16,6 +16,14 @@ export default function QueryProcessor(query: string): string {
       "Abby"
     );
   }
+  else if (query.toLowerCase().includes("plus")) {
+    const phrase = query.split(' ')
+    const index = phrase.indexOf("plus")
+    const sum = parseInt(phrase[index - 1]) + parseInt(phrase[index + 1])
+    return (
+      sum.toString()
+    );
+  }
 
   return "";
 }

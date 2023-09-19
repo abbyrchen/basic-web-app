@@ -33,4 +33,12 @@ describe("QueryProcessor", () => {
             "Abby"
         ));
     });
+
+    test('should add two values', () => {
+        const query = "5 plus 5"
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "10"
+        ));
+    })
 });
