@@ -28,7 +28,7 @@ export default function QueryProcessor(query: string): string {
   else if (query.toLowerCase().includes("multiplied")) {
     const phrase = query.split(' ')
     const index = phrase.indexOf("multiplied")
-    const product = parseInt(phrase[index - 1]) + parseInt(phrase[index + 2])
+    const product = parseInt(phrase[index - 1]) * parseInt(phrase[index + 2])
     return (
       product.toString()
     );
