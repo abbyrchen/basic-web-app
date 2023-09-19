@@ -49,4 +49,5 @@ describe("QueryProcessor", () => {
             "25"
         ));
     })
+
 });
