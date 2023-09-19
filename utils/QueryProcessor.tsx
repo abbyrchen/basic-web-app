@@ -34,5 +34,14 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  else if (query.toLowerCase().includes("minus")) {
+    const phrase = query.split(' ')
+    const index = phrase.indexOf("minus")
+    const sub = parseInt(phrase[index - 1]) - parseInt(phrase[index + 2])
+    return (
+      sub.toString()
+    );
+  }
+
   return "";
 }
